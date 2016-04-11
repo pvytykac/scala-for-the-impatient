@@ -103,7 +103,4 @@ object Arrays extends App {
     for(i <- arr.indices if i != ix) yield arr(i)
   }
 
-//  val arr = Array(10,20,-50,-25,13,45,-11)
-//  println(dropFirstNegative(arr).mkString(","))
-
 }
