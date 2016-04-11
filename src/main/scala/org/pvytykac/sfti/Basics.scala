@@ -1,5 +1,6 @@
 package org.pvytykac.sfti
 
+// Chapter 1
 object Basics extends App {
 
   {

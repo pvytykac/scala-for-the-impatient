@@ -1,17 +1,20 @@
 package org.pvytykac.sfti
 
-import org.slf4j.LoggerFactory
-
+// Chapter 2
 object ControlStructuresAndFunctions extends App {
 
   // 1. The signum of a number is 1 if the number is positive, –1 if it is negative, and
   //    0 if it is zero. Write a function that computes this value.
   //
+  // TODO: generic signum
   // failed attempts at generics :(
   // def signum3[T: Numeric](n: T)(implicit num: Numeric[T]): Int = ???
   // def signum4[T](n: T)(implicit num: Numeric[T]): Int = ???
   // def signum5(n: Either[Int,Long,Float,Double]): Int = ???
   // def signum6[T >: Either[Int,Long,Float,Double]](n: Ordered[T]): Int = if( n < 0 ) -1 else if ( n > 0 ) 1 else 0
+  // import Ordering.Implicits._
+  // def signum6[T: Numeric](n: T): Int = if( n < 0.asInstanceOf[T] ) -1 else if ( n > 0.asInstanceOf[T] ) 1 else 0
+
   def signum1(n: Double): Int = n.compare(0)
   def signum2(n: Double): Int = if (n < 0) -1 else if (n > 0) 1 else 0
 
